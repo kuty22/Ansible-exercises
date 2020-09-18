@@ -1,0 +1,9 @@
+---
+env: "DEV"
+page_title: "My personal page"
+home_title: "My title page"
+home_content: |
+    <p> Amet Lorem tempor duis do commodo adipisicing minim occaecat proident ullamco. </p>
+    <p> Tempor sint qui laborum qui non pariatur ullamco commodo proident veniam anim.  </p>
+    <p> Tempor sunt officia laborum qui laborum eu aliqua cupidatat excepteur officia. </p>
+    <p> Irure commodo voluptate proident quis exercitation proident cillum aute officia culpa culpa mollit sit.loremi</p>
