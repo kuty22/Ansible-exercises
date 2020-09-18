@@ -1,0 +1,27 @@
+---
+- hosts: all
+  vars:
+    version: "{{ lookup('file', 'version.txt', errors='warn') }}"
+  tasks:
+
+    - name: "Debug version"
+      debug:
+        msg: "{{ version }}"
+
+    - name: "create version directory"
+      file:
+        path: "/tmp/{{ version }}"
+        state: directory
+
+    - name: "List directory"
+      command: "ls /tmp/"
+      register: _ret_command
+
+    - name: "Display return command"
+      debug:
+        msg: "{{ _ret_command }}"
+
+    - name: "test if version directory exist"
+      debug:
+        msg: "The version {{ version }} exist in /tmp"
+      when: version in _ret_command.stdout_lines

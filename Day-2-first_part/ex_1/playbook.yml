@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  vars:
+    home_title: "My title page from role"
+  roles:
+    - name: "run role"
+      role: my_apache_role
