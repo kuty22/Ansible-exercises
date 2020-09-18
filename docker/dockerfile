@@ -1,0 +1,8 @@
+FROM python
+
+RUN apt update && \
+    apt install -y openssh-server sudo && \
+    useradd trainer -p "$(openssl passwd -1 password)" && \
+    echo "trainer ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+CMD service ssh start; tail -f /dev/null
